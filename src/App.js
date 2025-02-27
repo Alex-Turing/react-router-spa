@@ -15,7 +15,7 @@ function App() {
       <Router>
         {/**
          * Todo Aquello que se defina despues de <Router /> y antes de <Routes />
-         * Seran componentes o elmeentos comunes para toda la pagina y permaneceran
+         * Seran componentes o elementos comunes para toda la pagina y permaneceran
          * sin importar a que ruta vaya el usuario. 
          */}
         <Header />

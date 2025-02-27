@@ -3,13 +3,21 @@ import { Link } from "react-router-dom"
 import { getData } from "../api/api";
 import "../assets/css/blog.css"
 
-const CategoriesList = () => {
+const CategoriesList = ({url}) => {
 
     const [categories, setCategories] = useState([]);
 
+    /**
+     * getData es una funcion importada desde api.js
+     * que basicamente simula un backen usando una
+     * base de datos generada en un archivo json llamado db.json
+     * los parametros que toma la funcion son el endpoint del
+     * archivo db.json del cual quiero tomar la informacion y
+     * la funcion para guardar la informacion
+     */
     useEffect(() => {
-        getData(`/categorias`, setCategories)
-    }, [])
+        getData(url, setCategories)
+    }, [url])
 
     return (
         <ul className="category-list container flex">

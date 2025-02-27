@@ -3,12 +3,11 @@ import "../assets/css/componentes/card.css"
 import { getData } from '../api/api';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const Post = ({url}) => {
+const Post = () => {
     const [post, setPost] = useState({});
-
     const { id } = useParams();
-
     const navigate = useNavigate();
+    
     useEffect(() => {
        getData(`/posts/${id}`, setPost).catch(() => {
         navigate('/not-found');

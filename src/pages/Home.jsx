@@ -7,8 +7,8 @@ const Home = () => {
       <div className="container">
         <h2 className="title-page">Pet noticias</h2>
       </div>
-      <CategoriesList />
-      <ListPosts url={"/posts"}/>
+      <CategoriesList url={'/categorias'} />
+      <ListPosts url={"/posts"} />
     </main>
   )
 }
